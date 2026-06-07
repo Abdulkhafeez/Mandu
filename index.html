@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mandu</title>
+  <meta name="description" content="MANDU MANTI — 9 xil mantining lazzatini tatib ko'ring. 5 ta filial, tez va issiq yetkazib berish. 10:00–22:00." />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ===== Header ===== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a class="brand" href="#top" aria-label="MANDU MANTI">
+        <img src="assets/logo.svg" alt="MANDU MANTI" class="brand__logo" />
+        <span class="brand__name">MANDU<span>MANTI</span></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Asosiy menyu">
+        <a href="#menu" data-i18n="nav.menu">Menyu</a>
+        <a href="#why" data-i18n="nav.why">Nega biz</a>
+        <a href="#branches" data-i18n="nav.branches">Filiallar</a>
+        <a href="#delivery" data-i18n="nav.delivery">Yetkazib berish</a>
+        <a href="#reviews" data-i18n="nav.reviews">Sharhlar</a>
+      </nav>
+
+      <div class="header__actions">
+        <div class="langtoggle" role="group" aria-label="Til / Язык">
+          <button data-lang="uz" class="is-active" type="button">UZ</button>
+          <button data-lang="ru" type="button">RU</button>
+        </div>
+        <a class="btn btn--primary header__cta" href="https://t.me/Mandumanti_bot" target="_blank" rel="noopener" data-i18n="cta.order">Buyurtma berish</a>
+        <button class="burger" id="burger" aria-label="Menyu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <span class="badge badge--rating">★ 4.3 <em data-i18n="hero.reviews">46 sharh</em></span>
+          <h1 class="hero__title" data-i18n="hero.title">9 xil mantining lazzatini tatib ko'ring</h1>
+          <p class="hero__sub" data-i18n="hero.sub">Qo'lda tayyorlangan, bug'da pishirilgan. Tez va issiq yetkazib berish — har kuni 10:00 dan 22:00 gacha.</p>
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#menu" data-i18n="hero.viewMenu">Menyuni ko'rish</a>
+            <a class="btn btn--ghost" href="https://t.me/Mandumanti_bot" target="_blank" rel="noopener" data-i18n="hero.telegram">Telegram bot</a>
+            <a class="btn btn--call" href="tel:+998994995777">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .58 3.6 1 1 0 0 1-.25 1z"/></svg>
+              +998 99 499 57 77
+            </a>
+          </div>
+        </div>
+        <div class="hero__visual" aria-hidden="true">
+          <div class="steamer">
+            <span class="steam steam--1"></span><span class="steam steam--2"></span><span class="steam steam--3"></span>
+            <div class="steamer__plate">🥟</div>
+            <div class="steamer__tier steamer__tier--1"></div>
+            <div class="steamer__tier steamer__tier--2"></div>
+            <div class="steamer__tier steamer__tier--3"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Trust bar ===== -->
+    <section class="trust">
+      <div class="container trust__inner">
+        <div class="trust__item"><strong>9</strong><span data-i18n="trust.varieties">xil manti</span></div>
+        <div class="trust__item"><strong>5</strong><span data-i18n="trust.branches">ta filial</span></div>
+        <div class="trust__item"><strong>14.7K</strong><span data-i18n="trust.followers">obunachi</span></div>
+        <div class="trust__item"><strong>4.3★</strong><span data-i18n="trust.rating">reyting</span></div>
+        <div class="trust__item"><strong>10–22</strong><span data-i18n="trust.hours">har kuni</span></div>
+      </div>
+    </section>
+
+    <!-- ===== Menu ===== -->
+    <section class="section" id="menu">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="eyebrow" data-i18n="menu.eyebrow">Bizning menyu</span>
+          <h2 class="section__title" data-i18n="menu.title">Yangi va mazali</h2>
+          <p class="section__lead" data-i18n="menu.lead">Har bir manti qo'lda yopiladi va bug'da pishiriladi. Narxlar UZS da.</p>
+        </header>
+
+        <div class="tabs" id="menuTabs" role="tablist"></div>
+        <div class="menu-grid" id="menuGrid"></div>
+        <p class="menu__note" data-i18n="menu.note">* Menyu va narxlar namuna sifatida ko'rsatilgan. Aniq narxlar uchun Telegram bot yoki qo'ng'iroq qiling.</p>
+      </div>
+    </section>
+
+    <!-- ===== Why us ===== -->
+    <section class="section section--dark" id="why">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="eyebrow eyebrow--light" data-i18n="why.eyebrow">Nega aynan biz</span>
+          <h2 class="section__title" data-i18n="why.title">MANDU MANTI farqi</h2>
+        </header>
+        <div class="features">
+          <article class="feature reveal">
+            <div class="feature__icon">👐</div>
+            <h3 data-i18n="why.f1.t">Qo'lda tayyorlangan</h3>
+            <p data-i18n="why.f1.d">Har kuni yangi xamir va to'ldirma. Yarim tayyor mahsulot yo'q.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature__icon">🚀</div>
+            <h3 data-i18n="why.f2.t">Tez va issiq</h3>
+            <p data-i18n="why.f2.d">Buyurtmangiz issiqligicha, maxsus idishlarda yetkazib beriladi.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature__icon">🍽️</div>
+            <h3 data-i18n="why.f3.t">9 xil tanlov</h3>
+            <p data-i18n="why.f3.d">Klassikdan qovoqli va koreyscha manduga qadar — har kim o'ziga mosini topadi.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Branches ===== -->
+    <section class="section" id="branches">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="eyebrow" data-i18n="branches.eyebrow">Manzillar</span>
+          <h2 class="section__title" data-i18n="branches.title">5 ta filial</h2>
+          <p class="section__lead" data-i18n="branches.lead">Toshkent bo'ylab eng yaqin filialni tanlang. Har kuni 10:00–22:00.</p>
+        </header>
+        <div class="branch-grid" id="branchGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===== Delivery / Telegram ===== -->
+    <section class="cta-band" id="delivery">
+      <div class="container cta-band__inner reveal">
+        <div>
+          <h2 data-i18n="delivery.title">Tez va issiq yetkazib berish 🚀</h2>
+          <p data-i18n="delivery.sub">Telegram bot orqali bir necha soniyada buyurtma bering yoki bizga qo'ng'iroq qiling.</p>
+        </div>
+        <div class="cta-band__actions">
+          <a class="btn btn--dark" href="https://t.me/Mandumanti_bot" target="_blank" rel="noopener" data-i18n="delivery.bot">Telegram bot</a>
+          <a class="btn btn--outline-dark" href="tel:+998994995777">+998 99 499 57 77</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Reviews ===== -->
+    <section class="section section--cream" id="reviews">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="eyebrow" data-i18n="reviews.eyebrow">Mijozlar fikri</span>
+          <h2 class="section__title" data-i18n="reviews.title">4.3★ Google reytingi</h2>
+          <p class="section__lead" data-i18n="reviews.lead">46+ sharh asosida. Mana mijozlarimiz nima deydi.</p>
+        </header>
+        <div class="reviews" id="reviewGrid"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a class="brand" href="#top">
+          <img src="assets/logo.svg" alt="MANDU MANTI" class="brand__logo" />
+          <span class="brand__name brand__name--light">MANDU<span>MANTI</span></span>
+        </a>
+        <p data-i18n="footer.tagline">9 xil mantining lazzatini tatib ko'ring.</p>
+      </div>
+      <div class="footer__col">
+        <h4 data-i18n="footer.contact">Aloqa</h4>
+        <a href="tel:+998994995777">+998 99 499 57 77</a>
+        <a href="https://t.me/Mandumanti_bot" target="_blank" rel="noopener">t.me/Mandumanti_bot</a>
+        <a href="https://www.instagram.com/mandu_manti/" target="_blank" rel="noopener">@mandu_manti</a>
+      </div>
+      <div class="footer__col">
+        <h4 data-i18n="footer.hours">Ish vaqti</h4>
+        <p data-i18n="footer.hoursVal">Har kuni: 10:00 – 22:00</p>
+        <p data-i18n="footer.delivery">Yetkazib berish: kuniga</p>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span>© <span id="year"></span> MANDU MANTI</span>
+      <span data-i18n="footer.rights">Barcha huquqlar himoyalangan</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
